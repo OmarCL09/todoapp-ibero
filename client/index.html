@@ -3,20 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Todo app omar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Lista de Tareas</h1>
-        <form id="taskForm">
-            <input type="text" id="taskInput" placeholder="Nueva tarea" required>
-            <button type="submit">Añadir Tarea</button>
-        </form>
 
+    <!-- Pantalla de login -->
+    <div id="loginScreen" class="container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="loginMessage"></p>
+    </div>
+
+    <!-- Pantalla de To-Do (se oculta por defecto) -->
+    <div id="todoApp" class="container" style="display: none;">
+        <h2>Lista de Tareas</h2>
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Añadir nueva tarea" required>
+            <button type="submit">Añadir</button>
+        </form>
         <ul id="taskList"></ul>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
